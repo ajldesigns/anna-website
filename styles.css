@@ -412,6 +412,14 @@ body {
   margin: .3rem 0 .3rem;
 }
 .research-item p { max-width: 680px; color: var(--text-muted); }
+.text-link {
+  color: var(--gold);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(176, 138, 48, .35);
+  transition: border-color .25s;
+}
+.text-link:hover { border-color: var(--gold); }
 
 /* ===== Education ===== */
 .edu-grid {
