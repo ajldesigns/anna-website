@@ -1,23 +1,28 @@
 # Anna Lu — Personal Website
 
-Personal website for Anna Lu: pianist, agricultural & economic policy researcher, and youth advocate.
+Source for https://www.annajlu.com. Plain static HTML/CSS/JS, hosted on Vercel (no build step).
 
-Built as a fast, dependency-free static site (HTML/CSS/JS) with:
+## Pages
 
-- Animated hero with piano-key motif, scroll-reveal sections, and animated stats
-- Music timeline, concert history, and tabbed repertoire
-- Professional experience, research, leadership, education, and honors
-- SEO: meta/Open Graph/Twitter tags, JSON-LD `Person` structured data, `sitemap.xml`, `robots.txt`
-- Responsive layout with mobile nav and `prefers-reduced-motion` support
+- `index.html` — home: intro, Andover Economic Review, experience, leadership, honors
+- `research.html` — papers and abstracts, with read-only paper previews
+- `policy.html` — campaigns, Iowans for Brighter Future, student diplomacy
+- `arts.html` — piano and visual art
+
+`vercel.json` turns on clean URLs (`/research` instead of `/research.html`) and redirects
+`anna-lu.vercel.app` to `www.annajlu.com` so search engines index one domain.
+
+## Adding a paper preview (no downloadable PDF)
+
+1. Convert the PDF to page images: `pdftoppm -r 110 -png paper.pdf page` then convert to WebP.
+2. Save them as `papers/<slug>/1.webp`, `2.webp`, …
+3. In `research.html`, set that paper's `<div class="viewer" data-pages="N">` to the page count.
+
+Do not commit the PDF itself.
 
 ## Local preview
 
 ```sh
 python3 -m http.server 8000
 ```
-
-Then open http://localhost:8000.
-
-## Deployment
-
-Hosted on Vercel as a static site — no build step required.
+Open http://localhost:8000 (use `/research.html` etc. locally; clean URLs only work on Vercel).

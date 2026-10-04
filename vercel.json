@@ -1,0 +1,12 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "anna-lu.vercel.app" }],
+      "destination": "https://www.annajlu.com/:path*",
+      "permanent": true
+    }
+  ]
+}
