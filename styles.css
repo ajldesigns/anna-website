@@ -75,13 +75,14 @@ img { max-width: 100%; display: block; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
 
 /* ===== Home masthead ===== */
-.mast { display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px; align-items: center; padding: 56px 0 64px; }
+.mast { display: grid; grid-template-columns: 1fr 180px; gap: 52px; align-items: center; padding: 56px 0 64px; }
 .hello { font-family: var(--display); font-style: italic; font-size: 28px; color: var(--accent); }
 .mast h1 { font-family: var(--display); font-weight: 400; font-size: clamp(72px, 11vw, 140px); line-height: .9; letter-spacing: -.01em; color: var(--ink); }
 .mast .dek { margin-top: 22px; font-size: 21px; max-width: 540px; }
 .mast .meta { margin-top: 24px; }
 .mast-links { margin-top: 26px; display: flex; gap: 22px; flex-wrap: wrap; font-family: var(--sans); font-size: 14px; }
 .arch {
+  width: 100%;
   aspect-ratio: 3 / 4;
   border-radius: 999px 999px 14px 14px;
   background: var(--blush);
@@ -232,7 +233,7 @@ a.card:hover { border-color: var(--accent-soft); transform: translateY(-2px); }
   .wrap { padding: 0 22px; }
   .mast, .intro, .sec { grid-template-columns: 1fr; gap: 26px; }
   .mast { padding-top: 32px; }
-  .arch { max-width: 200px; }
+  .arch { max-width: 150px; }
   .sec { padding: 48px 0; }
   .nav-toggle { display: block; }
   .nav {
