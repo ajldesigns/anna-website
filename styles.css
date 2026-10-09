@@ -187,18 +187,6 @@ a.card:hover { border-color: var(--accent-soft); transform: translateY(-2px); }
 .pub .abstract { margin-top: 18px; padding-left: 20px; border-left: 2px solid var(--accent-soft); font-size: 17px; }
 .pub .abstract .label { display: block; margin-bottom: 6px; }
 .pub .abstract p + p { margin-top: 10px; }
-.placeholder { color: var(--muted); font-style: italic; }
-
-/* Paper viewer (page images, no download link) */
-.viewer { margin-top: 20px; border: 1px solid var(--rule); border-radius: 14px; background: var(--blush); overflow: hidden; }
-.viewer-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; font-family: var(--sans); font-size: 12px; color: var(--muted); border-bottom: 1px solid var(--accent-soft); }
-.viewer-bar button { background: none; border: 1px solid var(--accent-soft); border-radius: 999px; padding: 4px 14px; font-family: var(--sans); font-size: 12px; color: var(--accent-deep); cursor: pointer; }
-.viewer-bar button:hover { background: var(--white); }
-.viewer-pages { max-height: 0; overflow-y: auto; transition: max-height .5s var(--ease); }
-.viewer.open .viewer-pages { max-height: 720px; }
-.viewer-pages img { width: 100%; max-width: 760px; margin: 16px auto; background: #fff; box-shadow: 0 1px 8px rgba(58, 46, 51, .08); user-select: none; -webkit-user-drag: none; pointer-events: none; }
-.viewer-empty { padding: 28px; text-align: center; font-style: italic; color: var(--muted); font-size: 15.5px; }
-
 /* ===== Gallery ===== */
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .gallery figure { background: var(--blush); border-radius: 12px; aspect-ratio: 4 / 5; overflow: hidden; display: flex; align-items: center; justify-content: center; }

@@ -5,20 +5,43 @@ Source for https://www.annajlu.com. Plain static HTML/CSS/JS, hosted on Vercel (
 ## Pages
 
 - `index.html` — home: intro, Andover Economic Review, experience, leadership, honors
-- `research.html` — papers and abstracts, with read-only paper previews
+- `research.html` — papers, each with a short summary and abstract
 - `policy.html` — campaigns, Iowans for Brighter Future, student diplomacy
 - `arts.html` — piano and visual art
 
 `vercel.json` turns on clean URLs (`/research` instead of `/research.html`) and redirects
 `anna-lu.vercel.app` to `www.annajlu.com` so search engines index one domain.
 
-## Adding a paper preview (no downloadable PDF)
+## Adding a research entry
 
-1. Convert the PDF to page images: `pdftoppm -r 110 -png paper.pdf page` then convert to WebP.
-2. Save them as `papers/<slug>/1.webp`, `2.webp`, …
-3. In `research.html`, set that paper's `<div class="viewer" data-pages="N">` to the page count.
+The research page describes each paper rather than publishing it. No paper file is ever uploaded,
+served, or linked. Each entry is one `<article class="pub">`:
 
-Do not commit the PDF itself.
+```html
+<article class="pub reveal" id="short-slug">
+  <span class="label">year · where · what</span>
+  <h3>The paper's title</h3>
+  <p class="venue">Recognition or award line</p>
+  <p class="venue">Optional second line: status, dates, method</p>
+  <div class="abstract">
+    <span class="label">what it was for</span>
+    <p>Short description of the assignment and the approach.</p>
+  </div>
+  <div class="abstract">
+    <span class="label">abstract</span>
+    <p>One paragraph: the question, the method, what it found.</p>
+  </div>
+  <div class="chips">
+    <a class="chip" href="…" target="_blank" rel="noopener">Link label</a>
+  </div>
+</article>
+```
+
+Both text blocks run roughly 50 to 120 words. Copy on this site uses no quotation marks and no
+em dashes. Keep concrete numbers, dates, and figures where they exist.
+
+**Never commit the papers themselves.** The source PDFs and Word documents live outside this
+repository. Only the summaries above are published.
 
 ## Local preview
 
