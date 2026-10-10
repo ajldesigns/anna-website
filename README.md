@@ -43,6 +43,30 @@ em dashes. Keep concrete numbers, dates, and figures where they exist.
 **Never commit the papers themselves.** The source PDFs and Word documents live outside this
 repository. Only the summaries above are published.
 
+## Motion
+
+One gesture is used everywhere: a short rise and fade, eased out, played once. It is deliberately
+restrained — the pacing comes from things arriving in sequence as you scroll, not from things
+moving far.
+
+**To make something appear on scroll, add `class="reveal"` to the container.** If it has more than
+one element child, those children arrive in sequence (70ms apart, capped at five steps); otherwise
+the element itself animates. That is the whole API — nothing else is needed.
+
+Two rules keep it safe:
+
+- **Never write `class="rv"` in the markup.** `script.js` adds it, and only to elements that start
+  below the fold, so a group is never animated twice.
+- **Nothing is hidden by CSS.** The animation is paused via `.hold`, which the script also adds.
+  With JavaScript off, nothing is hidden and the page reads normally. Please keep it that way — do
+  not add `opacity: 0` to a stylesheet rule for a reveal.
+
+The masthead and the subpage headers animate with plain CSS keyframes rather than the script, so
+they still play if the script fails. The parallax targets (the arch portrait and the divider) are
+listed at the bottom of `script.js`. Everything is switched off under
+`prefers-reduced-motion: reduce`, in a block kept at the very end of `styles.css` so it wins against
+every rule above it.
+
 ## Local preview
 
 ```sh
