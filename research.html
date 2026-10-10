@@ -67,7 +67,7 @@
 
   <header class="top">
     <div class="wrap">
-      <a class="brand" href="/">Anna Lu</a>
+      <a class="brand" href="/"><svg class="brand-heart" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M50 91 C20 71 3 53 3 33 C3 17 15 6 29 6 C39 6 46 12 50 20 C54 12 61 6 71 6 C85 6 97 17 97 33 C97 53 80 71 50 91 Z"/></svg>Anna Lu</a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
       <ul class="nav" id="navLinks">
         <li><a href="/research" aria-current="page">research</a></li>
@@ -186,6 +186,16 @@
           <div class="abstract">
             <span class="label">abstract</span>
             <p>The textbook story is that a growing economy pushes prices up. This project tested that against 64 years of American data and found the relationship far weaker and stranger than the theory suggests. The overall correlation between annual GDP growth and inflation came out at r = -0.153, essentially negligible. A ten-year rolling correlation averaged -0.212 and swung between positive and negative through stagflation, the Great Moderation, and the post-pandemic spike. Only one version of the relationship held up: lag GDP growth by a year and the correlation becomes significant at r = 0.40, p &lt; 0.01. Growth looks less like a real-time signal and more like an accelerator that takes about twelve months to reach consumer prices.</p>
+          </div>
+          <div class="charts">
+            <figure>
+              <img src="/images/research/gdp-vs-inflation.png" width="1700" height="850" loading="lazy" alt="Line chart of United States GDP growth and CPI inflation from 1961 to 2024. Inflation peaks near 13.5 percent in 1980 and near 8 percent in 2022, while GDP growth swings between about minus 2 and plus 7 percent.">
+              <figcaption>US GDP growth and CPI inflation, World Bank data.</figcaption>
+            </figure>
+            <figure>
+              <img src="/images/research/rolling-correlation.png" width="1700" height="850" loading="lazy" alt="Line chart of the ten-year rolling correlation between GDP growth and inflation from 1970 to 2024. It swings between about minus 0.8 and plus 0.65 and crosses zero several times around an average of minus 0.21.">
+              <figcaption>The ten-year rolling correlation between them, averaging -0.21.</figcaption>
+            </figure>
           </div>
           <div class="chips">
             <a class="chip" href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG" target="_blank" rel="noopener">GDP growth data</a>
