@@ -12,6 +12,14 @@ Source for https://www.annajlu.com. Plain static HTML/CSS/JS, hosted on Vercel (
 `vercel.json` turns on clean URLs (`/research` instead of `/research.html`) and redirects
 `anna-lu.vercel.app` to `www.annajlu.com` so search engines index one domain.
 
+## Social preview image
+
+All four pages point at one shared Open Graph card, `images/og-card.jpg` — 1200×630, the standard
+1.91:1 ratio. It is what appears when a link is pasted into a text message, LinkedIn, or Slack.
+
+Do not edit that file by hand. It is rendered from HTML so it can be rebuilt exactly; `HANDOFF.md`
+§12 has the recipe. Keep it at 1200×630 and strip metadata when saving.
+
 ## Adding a research entry
 
 The research page describes each paper rather than publishing it. No paper file is ever uploaded,
