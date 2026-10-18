@@ -228,6 +228,9 @@ a.card:hover .go { transform: translateX(4px); }
 .footer .social a { text-decoration: none; color: var(--text); border-bottom: 1px solid var(--accent-soft); }
 .footer .social a:hover { color: var(--accent); }
 .footer .small { margin-top: 28px; }
+.footer .legal { margin-top: 10px; display: flex; justify-content: center; gap: 10px; font-family: var(--sans); font-size: 12px; color: var(--muted); }
+.footer .legal a { color: var(--muted); text-decoration: none; }
+.footer .legal a:hover { color: var(--accent); }
 
 /* ===== Motion =====
    One gesture, used everywhere: a short rise and fade, eased out, played once.
