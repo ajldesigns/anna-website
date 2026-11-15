@@ -322,43 +322,18 @@ a.card:hover .go { transform: translateX(4px); }
 
 /* ===== Photos ("a few photos along the way") ===== */
 .frames { padding: 8px 0 56px; }
-.frames summary {
-  width: fit-content;
-  cursor: pointer;
-  list-style: none;
+.frames-title {
   font-family: var(--display);
   font-style: italic;
-  font-size: 22px;
+  font-weight: 400;
+  font-size: 26px;
   color: var(--ink);
-  border-bottom: 1px solid var(--accent-soft);
-  transition: color .2s, border-color .2s;
 }
-.frames summary::-webkit-details-marker { display: none; }
-.frames summary::before {
-  content: "+";
-  display: inline-block;
-  width: 18px;
-  font-family: var(--sans);
-  font-style: normal;
-  font-size: 16px;
-  color: var(--accent);
-}
-.frames details[open] summary::before { content: "−"; }
-.frames summary:hover { color: var(--accent); border-color: var(--accent); }
 .frames-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 14px;
   margin-top: 22px;
-}
-/* Opened: each photo wipes down into place, one after the next */
-.frames details[open] figure {
-  animation: frame-in .75s var(--ease) backwards;
-  animation-delay: calc(var(--i, 0) * 55ms);
-}
-@keyframes frame-in {
-  from { clip-path: inset(0 0 100% 0 round 12px); }
-  to   { clip-path: inset(0 0 0 0 round 12px); }
 }
 .frames figure { margin: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(58, 46, 51, .08); }
 .frames img {
@@ -392,8 +367,7 @@ a.card:hover .go { transform: translateX(4px); }
   .mast-copy > *,
   .page-head > *,
   .arch,
-  .divider.rv,
-  .frames details[open] figure { animation: none; }
+  .divider.rv { animation: none; }
   .frames img,
   .frames figure,
   a.card,
