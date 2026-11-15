@@ -358,6 +358,9 @@ a.card:hover .go { transform: translateX(4px); }
   .frames-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+.elected { margin-left: 4px; font-family: var(--sans); font-size: 12px; letter-spacing: .08em; color: var(--accent-deep); white-space: nowrap; vertical-align: 2px; }
+.elected strong { font-weight: 500; }
+
 /* ===== Videos (arts page) ===== */
 .videos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 20px; }
 .video { margin: 0; }
