@@ -358,6 +358,15 @@ a.card:hover .go { transform: translateX(4px); }
   .frames-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+/* ===== Videos (arts page) ===== */
+.videos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 20px; }
+.video { margin: 0; }
+.video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: var(--blush); box-shadow: 0 6px 18px rgba(58, 46, 51, .08); }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video figcaption { margin-top: 10px; font-size: 16px; line-height: 1.4; color: var(--ink); }
+.video figcaption .label { display: block; margin-bottom: 2px; }
+@media (max-width: 560px) { .videos { grid-template-columns: 1fr; } }
+
 /* ===== Reduced motion =====
    Kept at the very end of the file on purpose: it has to win against every
    animation declared above it, including the ones near the foot of the sheet.
