@@ -394,7 +394,6 @@ em { font-weight: inherit; }
   transition: background .25s var(--ease), transform .3s var(--ease), box-shadow .3s var(--ease);
 }
 .nav li:last-child a:hover { background: var(--accent-deep); color: var(--white); transform: translateY(-1px); box-shadow: 0 6px 16px rgba(178, 58, 90, .28); }
-.progress { height: 2px; }
 
 /* Masthead */
 .hello { font-weight: 600; font-size: 30px; }
