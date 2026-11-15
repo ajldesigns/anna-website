@@ -1,4 +1,4 @@
-/* ===== Anna Lu — soft editorial ===== */
+/* ===== Anna Lu: soft editorial ===== */
 
 :root {
   --paper: #fbf7f4;
@@ -209,9 +209,6 @@ a.card:hover .go { transform: translateX(4px); }
 .gallery figure img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 18px rgba(58, 46, 51, .08); }
 .gallery figcaption { margin-top: 9px; font-family: var(--sans); font-size: 12px; color: var(--muted); }
 
-/* ===== Next-page links ===== */
-.next { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 56px 0; border-top: 1px solid var(--rule); }
-
 /* ===== Footer ===== */
 .footer { padding: 72px 0 64px; text-align: center; border-top: 1px solid var(--rule); }
 .footer .big { font-family: var(--display); font-size: 44px; color: var(--ink); margin-top: 6px; }
@@ -290,7 +287,7 @@ a.card:hover .go { transform: translateX(4px); }
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
-  .cols, .next { grid-template-columns: 1fr 1fr; }
+  .cols { grid-template-columns: 1fr 1fr; }
   .stats { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 820px) {
@@ -317,7 +314,7 @@ a.card:hover .go { transform: translateX(4px); }
   .gallery { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px) {
-  .cols, .cols.two, .next { grid-template-columns: 1fr; }
+  .cols, .cols.two { grid-template-columns: 1fr; }
   .honors li { grid-template-columns: 1fr; gap: 2px; }
   .footer .big { font-size: 34px; }
   .gallery { grid-template-columns: 1fr; }

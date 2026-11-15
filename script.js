@@ -1,4 +1,4 @@
-// ===== Anna Lu — site interactions =====
+// ===== Anna Lu: site interactions =====
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const siteHeader = document.querySelector('.top');
@@ -26,7 +26,7 @@ if (navToggle && navLinks) {
 // arrive in sequence; otherwise the element itself animates. The .rv class that
 // drives the animation is added here, never in the markup, so a group is only
 // ever animated once. Only things that start below the fold are held back, so an
-// element already on screen is never hidden — and with the script switched off
+// element already on screen is never hidden, and with the script switched off
 // nothing is hidden at all.
 const STAGGER = 70;     // ms between siblings in a group
 const STAGGER_CAP = 5;  // past this many, the rest land together
