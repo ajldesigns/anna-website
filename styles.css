@@ -477,10 +477,10 @@ a.card:hover { border-color: var(--accent); box-shadow: 0 16px 34px rgba(178, 58
 
 /* Footer */
 .footer { border-top: 2px solid var(--ink); }
-.footer .big { font-weight: 600; }
+.footer .big { font-weight: 400; }
 .footer .big a { background-image: linear-gradient(var(--accent), var(--accent)); background-size: 100% 2px; }
 .footer .big a:hover { color: var(--accent-deep); }
-.footer .social a { font-weight: 500; color: var(--ink); border-bottom: 2px solid var(--accent-soft); }
+.footer .social a { font-weight: 400; color: var(--ink); border-bottom: 2px solid var(--accent-soft); }
 .footer .social a:hover { border-color: var(--accent); }
 
 @media (max-width: 820px) {
